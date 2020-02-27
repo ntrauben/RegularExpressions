@@ -11,8 +11,6 @@ namespace RegularExpressions
     {
         static void Main(string[] args)
         {
-            MatchScore();
-
             //MatchMEID();
 
             //MatchAssessmentSection();
@@ -20,28 +18,6 @@ namespace RegularExpressions
             //VerifyRioPassword();
 
             Console.Read();
-        }
-
-        static void MatchScore()
-        {
-            var regEx = new Regex(@"^((([1-9]?[0-9](\.[0-9]+)?)|100)\%)$");
-            string score;
-
-            do
-            {
-                Console.Write("Enter Score (type . to quit):");
-                score = Console.ReadLine();
-
-                if (regEx.IsMatch(score))
-                {
-                    Console.WriteLine("valid");
-                }
-                else
-                {
-                    Console.WriteLine("invalid");
-                }
-            }
-            while (score != ".");
         }
 
         static void VerifyRioPassword()
